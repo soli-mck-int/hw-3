@@ -1,0 +1,17 @@
+import pandas as pd
+pybank=pd.read_csv("budget_data.csv")
+months = pybank.shape[0]
+print("Total months are "+ str(months))
+total = pybank['Profit/Losses'].sum()
+print("Total profit are $" + str(total))
+pybank['change']=pybank['Profit/Losses'].diff()
+total_change =pybank['change'].sum()
+avg=total_change/(float(months-1))
+print("the average change is: $""{:.2f}".format(avg))
+pybank[pybank['change']==pybank['change'].max()]
+pybank[pybank['change']==pybank['change'].min()]
+f=open("result.txt", "w")
+f, "Total months are "+ str(months)
+f, "Total profits are $" + str(total)
+f, "the average change is: $""{:.2f}".format(avg)
+f.close()
