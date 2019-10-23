@@ -1,3 +1,4 @@
+# part 1: get all the candidates, once collect the four candidates, process to part 2. (Run seperately because of the large data set)
 import os
 import csv
 
