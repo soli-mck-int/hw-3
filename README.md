@@ -1,6 +1,6 @@
 # hw-3
 
-PyBank turn in the the code using what we've learned before pandas.
+PyBank turn in is the the code using what we've learned before pandas.
 
 
 For Pypoll, I did the code seperately.
