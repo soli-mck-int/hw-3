@@ -1,0 +1,13 @@
+import os
+import csv
+
+csvpath=os.path.join('..','dapython','election_data.csv')
+with open(csvpath,'r',newline='') as csvfile:
+    csvreader=csv.reader(csvfile, delimiter=',')
+    csvheader=next(csvreader)
+    candidates=[]
+#get the complete list of candidates
+    for i in csvreader:
+        if i not in candidates:
+            candidates.append(i[2])
+        print(set(candidates))
